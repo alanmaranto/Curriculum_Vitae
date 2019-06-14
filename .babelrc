@@ -1,0 +1,10 @@
+//Configuramos un objeto que tendrá la configuracion de los presets y plugins a necesitar
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins":[
+        "transform-class-properties"
+    ]
+}
