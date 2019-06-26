@@ -1,7 +1,7 @@
 language: node_js
 cache:
   directories: 
-    - ~!@/.npm
+    - ~/.npm
 node_js:
   - '10.15.3'
 git:
@@ -16,6 +16,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: dist/
   target-branch: master
-  commit_message: "Elmo@gremlim - Deploy release ${TRAVIS_TAG}"
+  commit_message: "Deploy release ${TRAVIS_TAG}"
   on:
     branch: develop
