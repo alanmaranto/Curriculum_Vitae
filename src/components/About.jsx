@@ -11,7 +11,7 @@ const AboutAvatar = styled.div`
     padding: 2em 0 0 0;
 `;
 
-const AboutImg = styled.img`
+const AboutAvatarImg = styled.img`
     border-radius: 100%;
     width: 160px;
     height: 160px;
@@ -57,9 +57,7 @@ const About = ({ avatar, name, profession ,bio, address, social }) => (
     <AboutStyle>
         <div className="About-container">
             <AboutAvatar>
-                <figure>
-                    <AboutImg src={avatar} alt={name} />
-                </figure>
+                    <AboutAvatarImg src={avatar} alt={name} />
             </AboutAvatar>
             <AboutName>
                 <AboutH2>{name}</AboutH2>
@@ -73,7 +71,7 @@ const About = ({ avatar, name, profession ,bio, address, social }) => (
             <AboutLocation>
                 {address}
             </AboutLocation>
-            <div className="About-Social">
+            <div className="About-social">
                 <Social social={social} />
             </div>
         </div>
