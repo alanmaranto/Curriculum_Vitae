@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider} from 'styled-components';
+import styled, { ThemeProvider, css } from 'styled-components';
 
 const SocialStyle = styled.div`
     margin: 0 auto;
@@ -23,8 +23,8 @@ const SocialAnchor = styled.a`
     font-size: 1.2em;
 `;
 
-const SocialIcon = `
-    color: ${props => props.theme.color}
+const SocialIcon = styled.i`
+    color: ${props => props.theme.color};
 `; 
 
 const facebook = {
@@ -44,10 +44,10 @@ const github = {
 }
 
 const getColor = (name) => {
-    if (name == 'facebook') return facebook;
-    if (name == 'twitter') return twitter;
-    if (name == 'linkedin') return linkedin;
-    if (name == 'github;') return github;
+    if (name === 'facebook') return facebook;
+    if (name === 'twitter') return twitter;
+    if (name === 'linkedin') return linkedin;
+    if (name === 'github;') return github;
 }
 
 const Social = props => (
@@ -55,15 +55,15 @@ const Social = props => (
         {props.social &&
             <SocialUl>
                 {
-                    props.social.map((item, index) => (
+                    props.social.map((item, index) => 
                         <SocialLi key={`social-${index}`} target="_blank">
                             <SocialAnchor href={item.url}>
                                 <ThemeProvider theme={getColor(item.name)}>
-                                    <SocialIcon classname={`fa fa-${item.name}`}/>
+                                    <SocialIcon classname={`fa fa-${item.name}`}/> 
                                 </ThemeProvider>
                             </SocialAnchor>
                         </SocialLi>
-                    ))
+                    )
                 }
             </SocialUl>
         }

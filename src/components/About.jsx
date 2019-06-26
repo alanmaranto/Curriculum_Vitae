@@ -53,7 +53,7 @@ const AboutLocation = styled.p`
 `;
 
 //retorn explicito: como solo hay un elemento que retornar
-const About = ({ avatar, name, profession ,bio,address, social }) => (
+const About = ({ avatar, name, profession ,bio, address, social }) => (
     <AboutStyle>
         <div className="About-container">
             <AboutAvatar>
@@ -65,13 +65,13 @@ const About = ({ avatar, name, profession ,bio,address, social }) => (
                 <AboutH2>{name}</AboutH2>
             </AboutName>
             <AboutProfession>
-                <p>{profession}</p>
+                {profession}
             </AboutProfession>
             <AboutBio>
-                <p>{bio}</p>
+                {bio}
             </AboutBio>
             <AboutLocation>
-                <p>{address}</p>
+                {address}
             </AboutLocation>
             <div className="About-Social">
                 <Social social={social} />

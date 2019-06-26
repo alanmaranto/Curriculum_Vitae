@@ -1,4 +1,5 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Info from '../components/Info';
@@ -9,6 +10,15 @@ import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 import useGetData from '../hooks/useGetData';
 
+const globalStyle = createGlobalStyle`
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f5f5;
+    }
+`;
+
 const App = () => {
 
     const data = useGetData(); //trae los datos desde la api
@@ -16,6 +26,7 @@ const App = () => {
 
     return data.length === 0 ? <h1>Cargando...</h1> : (
         <Main>
+            <globalStyle />
             <Sidebar>
                 <About
                     avatar = {data.avatar}
