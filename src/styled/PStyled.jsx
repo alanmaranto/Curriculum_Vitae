@@ -8,6 +8,7 @@ const StyledP = styled.p`
     color: #757575;
 `;
 
+
 const PStyled = ({content}) => <StyledP>{content}</StyledP>;
 
 export default PStyled;
