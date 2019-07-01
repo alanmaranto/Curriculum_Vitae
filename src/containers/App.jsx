@@ -10,7 +10,7 @@ import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 import Loader from '../components/Loader';
-const API = 'https://us-central1-gndx-cv.cloudfunctions.net/me';
+const API = 'https://us-central1-cv-api-nueva.cloudfunctions.net/api';
 
 const GlobalStyle = createGlobalStyle`
   body {

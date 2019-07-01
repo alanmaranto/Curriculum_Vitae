@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'; //importamos funcions hooks de la libreria de react
 
- //api generada en otro curso a traves de firebase
-
 //funcion que actualiza nuestro estado: mydata es el estado; setData es la funcion que actualiza nuestro estado
 const useGetData = (url) => {
     const [mydata, setData] = useState([]);

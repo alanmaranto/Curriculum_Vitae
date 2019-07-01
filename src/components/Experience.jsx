@@ -10,7 +10,7 @@ const Experience = props => (
                 props.data.map((exp, index) => (
                     <div className="Experience-item" key={`Experience-${index}`}>
                     <H3Styled>{exp.jobTitle} @ {exp.company} 
-                        <span> {exp.startDate} - {exp.endDate}</span>
+                        <span> {exp.startDate}  {exp.endDate}</span>
                     </H3Styled>
                     <PStyled content={exp.jobDescription}/>
                     </div>

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const StyledH2 = styled.h2`
     font-family: 'Roboto'. sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .8px;
     margin: 1em 0 0 0;
-    color: #065b7c;
+    color: #055082;
 `;
 
 const H2Styled = ({name}) => <StyledH2>{name}</StyledH2>;
